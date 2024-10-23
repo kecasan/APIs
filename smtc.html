@@ -1,11 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PokéAPI Exercícios</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <div class="container">
+        <h1>PokéAPI Exercícios</h1>
+
+        
+        <input type="text" id="pokemon-name" placeholder="Digite o nome de um Pokémon">
+
+        
+        <button onclick="buscarPokemon()">Buscar Pokémon</button>
+        <button onclick="listarPrimeirosPokemons()">Listar Primeiros 5 Pokémon</button>
+        <button onclick="gerarPokemonAleatorio()">Gerar Pokémon Aleatório</button>
+
+        
+        <div id="resultado"></div>
+    </div>
+
+    <script src="tudo.js"></script>
     
 </body>
 </html>
