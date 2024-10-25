@@ -6,11 +6,16 @@ function buscaPersonagem() {
             return response.json();
         })
         .then(function(data) {
-
-            document.getElementById('resultado').innerHTML = 
-                `<p><strong>Nome:</strong>` + data.results.name + `</p>`;
-            
+            if (data.results.length > 0) {
+                var personagemEncontrado = data.results[0];
+                document.getElementById('resultado').innerHTML = 
+                    `<p><strong>Nome:</strong> ${personagemEncontrado.name}</p>
+                     <p><strong>Altura:</strong> ${personagemEncontrado.height}</p>
+                     <p><strong>Peso:</strong> ${personagemEncontrado.mass}</p>`;
+            } else {
+                document.getElementById('resultado').innerHTML = 
+                    `<p>Nenhum personagem encontrado.</p>`;
+            }
             console.log(data);
-
         });
 }
